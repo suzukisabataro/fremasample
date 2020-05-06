@@ -1,0 +1,13 @@
+.show__header--contents
+  .show__items--name
+    %h1
+      = "商品名"          # = @items.name
+  .show__items--content
+    %h2
+      = "商品の説明"             # = @items.text
+
+.show__main--contents
+  .show__images
+  %img(src = "" alt = "写真")  
+  .show__items--details
+                               -#  = @items__images.img
