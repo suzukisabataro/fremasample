@@ -1,2 +1,78 @@
-%h1 Items#index
-%p Find me in app/views/items/index.html.erb
+.index__top
+  .dindex__top--box
+    = link_to "#", class: "index__top--image" do
+    イメージ図
+-# 人気カテゴリー
+.index__category
+  %h2.index__category--top 人気カテゴリー
+  .index__category--names
+    %ul.index__category--names__box
+     %li.index__category--names__box--a
+      = link_to "#", class: "index__a" do
+      レディース
+     %li.index__category--names__box--a
+      = link_to "#", class: "index__a" do
+      メンズ
+     %li.index__category--names__box--a
+      = link_to "#", class: "index__a" do
+      家電
+     %li.index__category--names__box--a
+      = link_to "#", class: "index__a" do
+      おもちゃ
+
+.index__product
+ .index__product--list
+   .index__product--list__box
+    %h3.index__product--list__box--name
+    レディースアイテム
+    = link_to "#", class: "index__a" do
+    もっと見る
+   .index__product--list__items
+    .index__product--list__items--box
+     %ul.index__product--list__items--box__ul
+      %li.index__product--list__items--box__ul--li
+       .index__product--list__items--box__ul--li__image
+        = link_to "#", class: "index__a" do
+        -# %div
+        -# %span
+      %li.index__product--list__items--box__ul--li
+       .index__product--list__items--box__ul--li__image
+        = link_to "#", class: "index__a" do
+        -# %div
+        -# %span
+      %li.index__product--list__items--box__ul--li
+       .index__product--list__items--box__ul--li__image
+        = link_to "#", class: "index__a" do
+        -# %div
+        -# %span
+      %li.index__product--list__items--box__ul--li
+       .index__product--list__items--box__ul--li__image
+        = link_to "#", class: "index__a" do
+        -# %div
+        -# %span
+      %li.index__product--list__items--box__ul--li
+       .index__product--list__items--box__ul--li__image
+        = link_to "#", class: "index__a" do
+        -# %div
+        -# %span
+
+    
+
+
+-# ブランドカテゴリー
+.index__category
+  %h2.index__category--top 人気ブランド
+  .index__category--names
+    %ul.index__category--names__box
+     %li.index__category--names__box--a
+      = link_to "#", class: "index__a" do
+      シャネル
+     %li.index__category--names__box--a
+      = link_to "#", class: "index__a" do
+      ルイヴィトン
+     %li.index__category--names__box--a
+      = link_to "#", class: "index__a" do
+      シャネル
+     %li.index__category--names__box--a
+      = link_to "#", class: "index__a" do
+      ナイキ
