@@ -7,7 +7,7 @@
       .from
         = form_with model: @items, local: true, class:"from-seach" do |f|
           = f.text_field :name, class: "from-seach-area", placeholder: "キーワードから探す"
-          = f.submit "submit", class: "from-seach-submit"
+          = f.submit "検索", class: "from-seach-submit"
     .nav-link
       .nav-link-choice
         = link_to "" do
