@@ -2,6 +2,10 @@ table th{
     padding:10px;
 }
 
+table td {
+  writing-mode:horizontal-tb;
+}
+
 .show__header--contents{
     text-align:center;
     width:70%;
