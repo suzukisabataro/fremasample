@@ -52,6 +52,43 @@ header {
             background: rgb(161, 192, 161);
             height: 64px;
             margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            &-choice {
+              width: 400px;
+              height: 100%;
+              background: pink;
+              display: flex;
+              font-size: 23px;
+              a {
+                margin: auto 0;
+                text-decoration: none;
+              }
+              &-category {
+                
+              }
+              &-brand {
+                padding-left: 10px;
+              }
+            }
+            ul {
+              width: 700px;
+              padding: 0;
+              height: 100%;
+              margin: 0;
+              background: blue;
+              display: flex;
+              justify-content: space-around;
+              a {
+                list-style: none;
+                padding: 0 14px;
+                margin: auto 0;
+                text-decoration: none;
+              }
+              li {
+                font-size: 23px;
+              }
+            }
           }
         }
       }
