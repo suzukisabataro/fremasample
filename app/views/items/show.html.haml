@@ -11,3 +11,76 @@
   %img(src = "" alt = "写真")  
   .show__items--details
                                -#  = @items__images.img
+.show__header--contents
+  .show__items--name
+    %h1
+      = "商品名"          # = @items.name
+      = "商品名fendi Tシャツ 美品"          # = @items.name
+  .show__items--content
+    %h2
+      = "商品の説明"             # = @items.text
+      = "商品の説明『fendi Tシャツ 美品』は、42回の取引実績を持つじ　んさんから出品されました。フェンディ（Tシャツ/カットソー(半袖/袖なし)/レディース）の商品で、兵庫県から4~7日で発送されます。"             # = @items.text
+
+.show__main--contents
+  .show__images
+  %img(src = "" alt = "写真")  
+  %img(src = "https://www.chanel.com/wfj/medias/decoupes-1534x1774-CODECOCO.jpg?context=bWFzdGVyfGNtc2ltYWdlc3w4MzYzNTR8aW1hZ2UvanBlZ3xjbXNpbWFnZXMvaGYzL2g1Yi84ODkxMzQ5MjcwNTU4LmpwZ3wyYzhlNjZmODY0NjRlMWEzZTA4MzFlMmM3YWZmNWQyMTJjZDcyOTg2YjQxNzZkMjk0ODE0YTUyZDhjNjk5ODc5" alt = "写真" class = "show_image")    
+  
+  .show__items--details
+                               -#  = @items__images.img
+    %table.show_items--details__details{border:"1"}
+      %tr
+        %th
+          = "出品者"
+        %td                    
+          = "出品者(current_user?)"  
+
+      %tr
+        %th
+          = "カテゴリー"
+        %td 
+          = "レディース"
+
+      %tr 
+        %th 
+          = "ブランド"
+        %td 
+          = "シャネル"
+
+      %tr 
+        %th 
+          = "商品のサイズ"
+        %td 
+          = "FREE SIZE"
+
+      %tr 
+        %th 
+          = "商品の状態"
+        %td 
+          = "未使用に近い"
+
+      %tr 
+        %th 
+          = "配送料の負担"
+        %td 
+          = "送料込み（出品者負担)"
+
+      %tr 
+        %th 
+          = "配送の方法"
+        %td 
+          = "未定"
+
+      %tr 
+        %th 
+          = "配送元地域"
+        %td 
+          = "兵庫県"
+
+      %tr 
+        %th 
+          = "発送日の目安"
+        %td 
+          = "1週間程度"
+
+.show__price
