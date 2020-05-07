@@ -3,7 +3,7 @@
     .nav-title
       .nav-title-icon
         = link_to "" do
-          = image_tag "https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg"
+          = image_tag "material/logo/logo.png", size: "250x64"
       .from
         = form_with model: @items, local: true, class:"from-seach" do |f|
           = f.text_field :name, class: 'from-seach-area', placeholder: 'グループ名を入力してください'
