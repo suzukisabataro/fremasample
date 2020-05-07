@@ -1,3 +1,42 @@
+// Appバナー
+.appBanner {
+  background-image: url("material/pict/bg-appBanner-pict.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 220px;
+  padding: 100px 40px;
+  .inner {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    display: block;
+    h2 {
+      font-size: 27px;
+      margin: 0;
+    }
+      p {
+      font-size: 39px;
+      margin: 0;
+    }
+    &-icon {
+      width: 100%;
+      display: flex;
+      margin-top: 20px;
+      justify-content: center;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+// フッター
 footer {
   background-color: #272727;
   height: 300px;
