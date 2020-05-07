@@ -2,6 +2,10 @@ table th{
     padding:10px;
 }
 
+table td {
+  writing-mode:horizontal-tb;
+}
+
 .show__header--contents{
     text-align:center;
     width:70%;
@@ -9,10 +13,8 @@ table th{
 
 .show__main--contents{
     display:flex;
+    width:70%;
 }
-
-
-
 
 .show_image{
     width:50%;
