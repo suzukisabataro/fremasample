@@ -19,7 +19,7 @@
           .content-image
             .content-image_icon
               =image_tag "material/icon/icon_camera.png", width:"24px", height:"24px"
-            .content-image_text
+            .content-image_text{data: {message: {id: message.id}}}
               %P ドラッグ&ドロップ 
               またはクリックしてファイルをアップロード
       .product_name
@@ -129,11 +129,3 @@
             戻る
         .exhibition-content2
           利用規約
-  .footer
-    .footer-content
-      .footer-first
-        プライバシーポリシー
-      .footer-second
-        ロゴ
-      .footer-third
-        フリマ.com
