@@ -454,8 +454,20 @@
             font-size: 17px;
             padding: 0 24px;     
             color: white;
+            line-height: 48px;
           }
-          .content-2{}
+          .content-2{
+            height:48px;
+            background-color: gray;
+            text-align: center;
+            border-radius: 5px; 
+            font-size: 17px;
+            padding: 0 24px;     
+            color: white;
+            line-height: 48px;
+            margin-top: 20px;
+
+          }
           .content-3{}
         }
       }
