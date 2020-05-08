@@ -8,34 +8,10 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %header
-      .nav
-        .nav-title
-          .nav-title-icon
-            = link_to "" do
-              = image_tag "https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg"
-          .from
-            = form_with model: @items, local: true, class:"from-seach" do |f|
-              = f.text_field :name, class: 'from-seach-area', placeholder: 'グループ名を入力してください'
-              = f.submit "seach", class: "from-seach-submit"
-        .nav-link
-          .nav-link-choice
-            = link_to "" do
-              -# アイコン
-              .nav-link-choice-category カテゴリから探す
-            = link_to "" do
-              -# アイコン
-              .nav-link-choice-brand ブランドから探す
-          %ul
-            = link_to "" do
-              %li いいね！一覧
-            = link_to "" do
-              %li お知らせ
-            = link_to "" do
-              %li やることリスト
-            = link_to "" do
-              %li マイページ
-
-
-
+    .layouts__application
+      = render partial: 'partial/navbar'
+      
     = yield
+
+    .layouts__application
+      = render partial: 'partial/footer'
