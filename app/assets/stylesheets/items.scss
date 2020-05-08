@@ -1,3 +1,309 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+.top {
+  width: 100vw;
+  height: 500px;
+  background-image: url('material/pict/bg-mainVisual-pict_pc.jpg');
+  background-size:cover;
+  position: relative;
+  color: white;
+    .index__top__name {
+      position: absolute;
+      padding: 35px 60px;
+      margin: 0 auto;
+    &--title {
+      font-size: 60px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    }
+    &--subtitle {
+      font-size: 20px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    }
+  }
+}
+.index__top__btn {
+  display: flex;
+  margin-top: 20px;
+  .app {
+    width: 180px;
+    margin-right: 10px;
+  }
+  .goo {
+    width: 180px;
+    margin-right: 10px;
+  }
+  .app:hover {
+    opacity: 0.5;
+  }
+  .goo:hover {
+    opacity: 0.5;
+  }
+}
+
+.topReason {
+  padding: 60px;
+  text-align: center;
+  &__title {
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  &__title::before,
+  &__title::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid mediumturquoise;
+    width: 60px;
+    margin: 0 150px;
+  }
+  &__lists {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    &__list {
+      margin: 0 auto;
+      width: 30%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .list__pict {
+      position: relative;
+      margin: 16px 40px 0 0;
+      &--num {
+        width: 60px;
+        height: 60px;
+        background-color: mediumturquoise;
+        position: absolute;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 60px;
+        color: white;
+      }
+      .pict {
+        width: 300px;
+        height: 300px;
+      }
+      &__message {
+        font-size: 24px;
+        font-weight: bold;
+        color: mediumturquoise;
+        text-align: center;
+      }
+      &__submessage {
+        font-size: 18px;
+        text-align: center;
+        width: 300px;
+      }
+    }
+  }
+}
+
+.indexmiddle {
+  width: 100vw;
+  height: 400px;
+  background-image: url('material/pict/bg-topMiddleDl-pict.jpg');
+  background-size:cover;
+  position: relative;
+  color: white;
+  &__name {
+      position: absolute;
+      padding: 35px 60px;
+      margin: 0 auto;
+    &--title {
+      font-size: 27px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      margin-bottom: 30px;
+    }
+    &--subtitle {
+      font-size: 20px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.features {
+  padding: 60px 80px;
+  text-align: center;
+  &__title {
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  &__title::before,
+  &__title::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid mediumturquoise;
+    width: 60px;
+    margin: 0 50px;
+  }
+  &__items {
+    display: flex;
+    width: 100%;
+    &__item {
+      width: calc(1 / 3 * 100%);
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 20px;
+    }
+    &__image {
+      width: 100%;
+      height: 315px;
+      .features__image {
+        width: 60%;
+        height: 100%;
+      }
+    }
+    &__title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    &__text {
+      font-size: 15px;
+      text-align: left;
+    }
+  }
+}
+
+.index__category {
+  height: 85px;
+  padding: 56px 0 60px 0;
+  background: white;
+  .index__category--top {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .index__category--names {
+    width: 100%;
+    height: 30px;
+    &__box {
+      display: flex;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+      list-style: none;
+    }
+    &__boxs {
+      background-color: rgb(245, 245, 245);
+      margin: 10px 0 0 10px;
+      padding: 8px 16px;
+      border-radius: 1rem;
+    }
+  }
+}
+.category__a {
+  padding: 8px 16px;
+  color: black;
+}
+
+
+// アイテム一覧
+.index__product {
+  width: 100%;
+  height: 550px;
+  text-align: center;
+  &__list {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: text-bottom;
+    &--name {
+      font-size: 24px;
+      display: block;
+    }
+  .items {
+    padding: 0 30px;
+    color: lightblue;
+    font-size: 18px;
+    margin-top: 35px;
+    }
+  }
+}
+
+
+.product {
+  width: 100%;
+  &__posts {
+    width: 800px;
+    margin: 0 auto;
+    &--boxs {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      &__item {
+        width: 23%;
+        height: 200px;
+        margin: 10px 5px;
+        list-style: none;
+        background-color: white;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        position: relative
+      }
+    }
+  }
+}
+.item-image {
+  width: 100%;
+  height: 120px;
+}
+.posts__price {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  padding-right: 5px;
+  color: white;
+  background: rgba(0,0,0,.4);
+  border-radius: 0 14px 14px 0;
+}
+.posta__tag {
+  color: black;
+  text-align: left;
+}
+
+.purchaseBtn {
+  width: 120px;
+  height: 120px;
+  background-color: #3CCACE;
+  padding: 15px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  &__text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    padding: 8px 0;
+  }
+  &__image {
+    width: 60x;
+    height: 60px;
+  }
+}
