@@ -1,223 +1,265 @@
-.index__top
-  .dindex__top--box
-    = link_to root_path, class: "index__top--image" do
-      イメージ
-.index__category
-  %h2.index__category--top
-    人気カテゴリー
-  .index__category--names
-    %ul.index__category--names__box
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          レディース
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          メンズ
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          家電
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          おもちゃ
+%section.top
+  .index__top__name
+    %h2.index__top__name--title
+      = "人生を変えるフリマアプリ"
+    %p.index__top__name--subtitle
+      FURIMAはだれでもかんたんに出品・購入できる
+      %br
+      フリマアプリです
+    .index__top__btn
+      = link_to class: "app__btn" do
+        = image_tag "http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg", class: "app"
+      = link_to class: "goo__btn" do
+        = image_tag "http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg", class: "goo"
 
-.index__product
-  .index__product--list
-    .index__product--list__box
-      %h3.index__product--list__box--name
-        レディース新着アイテム
-      = link_to root_path, class: "items" do
-        もっと見る
-  .index__product--list__items
-    .index__product--list__items--box
-      %ul.index__product--list__items--box__a
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-  .index__product--list__items
-    .index__product--list__items--box
-      %ul.index__product--list__items--box__a
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
+%section.topReason
+  %h2.topReason__title
+    = "FURIMAアプリが選ばれる理由"
+  %ul.topReason__lists
+    %li.topReason__lists__list
+      .list__pict
+        %span.list__pict--num
+          = "1"
+        = image_tag "material/pict/pict-reason-01.jpg", class: "pict"
+        %h3.list__pict__message
+          %span{:style => "color: mediumturquoise;"} 3分
+          %span{:style => "color: black;"} ですぐに出品！
+        %p.list__pict__submessage
+          = "スマホで入力するだけで簡単に出品できる！"
+    %li.topReason__lists__list
+      .list__pict
+        %span.list__pict--num
+          = "2"
+        = image_tag "material/pict/pict-reason-02.jpg", class: "pict"
+        %h3.list__pict__message
+          %span{:style => "color: mediumturquoise;"} シンプル
+          %span{:style => "color: black;"} で使いやすい！
+        %p.list__pict__submessage
+          = "めんどくさい入力は必要なく、検索も購入もスムーズ！"
+    %li.topReason__lists__list
+      .list__pict
+        %span.list__pict--num
+          = "3"
+        = image_tag "material/pict/pict-reason-03.jpg", class: "pict"
+        %h3.list__pict__message
+          %span{:style => "color: mediumturquoise;"} 手数料
+          %span{:style => "color: black;"} 業界最安値！
+        %p.list__pict__submessage
+          = "最大3%でお得に出品&購入！"
 
-.index__category
+%section.indexmiddle
+  .indexmiddle__name
+    %h2.indexmiddle__name--title
+      = "会員数日本一位"
+    %p.indexmiddle__name--subtitle
+      FURIMAは、フリマアプリで最も人気。
+      %br
+      出品・購入回数も業界最多です！
+      %br
+      ほしかったあの商品に出会えるかもしれません。
+    .index__top__btn
+      = link_to class: "app__btn" do
+        = image_tag "http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg", class: "app"
+      = link_to class: "goo__btn" do
+        = image_tag "http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg", class: "goo"
+
+%section.features
+  %h2.features__title
+    = "FURIMAの特徴"
+  .features__items
+    %section.features__items__item
+      %figure.features__items__image
+        = image_tag "material/icon/icon-01.png", class: "features__image"
+      %h3.features__items__title
+        = "簡単に売り買いできる"
+      %p.features__items-__text
+        = "スマホひとつで、いつでもどこでも簡単に出品・購入が可能！"
+    %section.features__items__item
+      %figure.features__items__image
+        = image_tag "material/icon/icon-03.png", class: "features__image"
+      %h3.features__items__title
+        = "売上金は即日振込みに対応"
+      %p.features__items__text
+        = "午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!"
+    %section.features__items__item
+      %figure.features__items__image
+        = image_tag "material/icon/icon-04.png", class: "features__image"
+      %h3.features__items__title
+        = "様々な支払いに対応"
+      %p.features__items-__text
+        = "お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。"
+
+       
+%section.index__category
   %h2.index__category--top
-    人気ブランド
+    = "人気カテゴリー"
   .index__category--names
     %ul.index__category--names__box
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          レディース
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          メンズ
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          家電
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          おもちゃ
-.index__product
-  .index__product--list
-    .index__product--list__box
-      %h3.index__product--list__box--name
-        レディース新着アイテム
-      = link_to root_path, class: "items" do
-        もっと見る
-  .index__product--list__items
-    .index__product--list__items--box
-      %ul.index__product--list__items--box__a
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-.index__category
-  %h2.index__category--top
-    人気ブランド
-  .index__category--names
-    %ul.index__category--names__box
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          レディース
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          メンズ
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          家電
-      %li.index__category--names__box--a
-        = link_to root_path, class: "index__a" do
-          おもちゃ
-.index__product
-  .index__product--list
-    .index__product--list__box
-      %h3.index__product--list__box--name
-        レディース新着アイテム
-      = link_to root_path, class: "items" do
-        もっと見る
-  .index__product--list__items
-    .index__product--list__items--box
-      %ul.index__product--list__items--box__a
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__i" do
-              服
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-        %li.index__product--list__items--box__a--b
-          .index__product--list__items--box__a--b__image
-            = link_to root_path, class: "index__a" do
-              服 
-.index__add
-  = image_tag src = "https://www.pakutaso.com/shared/img/thumb/cryptocurrency1409_TP_V.jpg", class: "images"
-  .index__add__imags
-    .index__add__images--app
-    .index__add__images--device
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "レディース"
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "メンズ"
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "家電"
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "おもちゃ"
+
+%section.index__product
+  .index__product__list
+    %h3.index__product__list--name
+      = "レディースアイテム一覧"
+    = link_to root_path, class: "items" do
+      %span{:style => "font-style: normal;"}  もっと見る
+      %span{:style => "font-weight: bold;"} >
+
+  .product
+    .product__posts
+      %ul.product__posts--boxs
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+
+%section.index__product
+  .index__product__list
+    %h3.index__product__list--name
+      = "レディースアイテム一覧"
+    = link_to root_path, class: "items" do
+      %span{:style => "font-style: normal;"}  もっと見る
+      %span{:style => "font-weight: bold;"} >
+
+  .product
+    .product__posts
+      %ul.product__posts--boxs
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+        %li.product__posts--boxs__item
+          = link_to root_path, class: "index" do
+            .posts__image
+              = image_tag "material/pict/bg-mainVisual-pict_pc.jpg", class: "item-image"
+              %span.posts__price
+                = "￥2,500"
+              %p.posta__tag
+                = "麦わら帽子夏にぴったり麦わら帽子"
+       
+
+
+= render partial: 'partial/camera'
