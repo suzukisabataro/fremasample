@@ -1,3 +1,6 @@
+
+
+
 table th{
     padding:10px;
     & td{
@@ -6,10 +9,9 @@ table th{
     }
 
 
-
 .show__header--contents{
-    text-align:center;
-}
+  text-align:center;
+    }
 
 
 .show__main--contents{
@@ -81,13 +83,13 @@ table th{
 }
 
 .show__link--next{
-    margin-right:50px;
+    margin-right:100px;
     margin-top:20px;
     margin-bottom:20px;
 }
 
 .show__link--prev{
-    margin-left:50px;
+    margin-left:100px;
     margin-top:20px;
     margin-bottom:20px;
 }
@@ -95,7 +97,6 @@ table th{
 .show__medhia--links{
     width:500px;
     height:100px;
-    background-color:blue;
     margin:0 auto;
     position:relative;
 
@@ -104,7 +105,6 @@ table th{
 
 
 .show__medhia--links--box{
-    background-color:red;
     width:250px;
     height:50px;
     position:absolute;
@@ -120,28 +120,35 @@ a{
 
 .fa-facebook{
   font-size:3rem;
+  color:#3b5998;
 }
+
 .fa-twitter{
   font-size:3rem;
+  color:#55ACEE;
+  padding-left:20px;
 }
 
 .fa-line{
   font-size:3rem;
+  color:#00B900;
+  padding-left:20px;
+  padding-right:20px;
 }
 
 .fa-pinterest-square{
     font-size:3rem; 
+    color:#bd081c;
 }
 
 .show__users{
     margin-top:30px;
-    margin-left:50px;
+    margin-left:70px;
     font-size:30px;
 }
 
 
 .show__users--other{
-  background-color:yellow;
   width:700px;
   height:700px;
   margin:0 auto;
@@ -152,7 +159,6 @@ a{
 .show__users--other__item{
     width:220px;
     height:300px;
-    background-color:black;
     margin: 0 20px 20px 0;
     position:relative;
 }
