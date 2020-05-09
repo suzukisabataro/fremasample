@@ -71,6 +71,8 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-sass'
 gem 'devise', '~> 4.6.1'
+gem 'mini_magick'
+gem 'carrierwave'
 
 group :production do
   gem 'unicorn'
