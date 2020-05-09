@@ -63,11 +63,10 @@
             margin-top: 16px;
             text-align: center;
             font-size: 12px;
-            position: relative;
             .content-image_icon{
               height:24px;
               width:24px;
-              position: absolute;
+              // position: absolute;
               margin-left: 300px;
               margin-top: 35px;
             }
@@ -141,8 +140,12 @@
           .product-name_text{
             height:221px;
             width:620px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+            .text-buttom{
+              height:221px;
+              width:620px;
+              border-radius: 5px;
+              border: 1px solid #ccc;
+            }
           }
         }
       }
@@ -442,12 +445,12 @@
         .exhibition-content{
           height:164px;
           width:360px;
-          background-color: yellowgreen;
           margin-left: auto;
           margin-right: auto;
           margin-top: 32px;
           .content-1{
             height:48px;
+            width:360px;
             background-color: red;
             text-align: center;
             border-radius: 5px; 
@@ -458,6 +461,7 @@
           }
           .content-2{
             height:48px;
+            width:360px;
             background-color: gray;
             text-align: center;
             border-radius: 5px; 
@@ -466,9 +470,20 @@
             color: white;
             line-height: 48px;
             margin-top: 20px;
-
           }
-          .content-3{}
+          .content-3{
+            margin-top: 24px;
+            color: #0095ee;
+            text-align: center;
+          }
+        }
+        .exhibition-content2{
+          height:32px;
+          width:620px;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 12px;
+          line-height: 1.4em;
         }
       }
     }
