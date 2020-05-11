@@ -121,6 +121,7 @@
 .show__users--other
   .show__users--other__item
     .show__users--other__item--image
+      =image_tag @items.item_images.first.image.url, size:"220x190" 
     .show__users--other__item--contents
       .show__users--other__item--contents__name
         ="ぼったくりプリンだよ"
