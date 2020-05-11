@@ -163,7 +163,6 @@ a{
 
 .show__users--other{
   width:700px;
-  height:700px;
   margin:0 auto;
   display:flex;
   flex-wrap:wrap;
@@ -173,7 +172,6 @@ a{
     width:220px;
     height:300px;
     margin: 0 20px 20px 0;
-    position:relative;
 }
 
 .show__users--other__item--right{
@@ -181,11 +179,8 @@ a{
 }
 
 .show__users--other__item--image{
-    width:220px;
-    height:190px;
-    position:absolute;
-    left:0px;
-    top:0px;
+    width:22px;
+    height:19px;
 }
 
 

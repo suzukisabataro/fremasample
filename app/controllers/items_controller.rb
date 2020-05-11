@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @items=Item.find(1)
+    @items=Item.all.includes(:item_images).order('created_at DESC')
   end
 
   def new
