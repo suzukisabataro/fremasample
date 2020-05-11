@@ -1,9 +1,9 @@
-= form_with model:@items, local:true do |f|
+= form_with model:@item, local:true do |f|
   .wapper
     .header
       .header-icon
         = link_to do
-          = image_tag "material/logo/logo.png", width:"189px", height:"49px"
+          =image_tag "material/logo/logo.png", width:"189px", height:"49px"
     .body
       .brank
       .main_body
@@ -19,10 +19,11 @@
             .content-image
               .content-image_icon
                 =image_tag "material/icon/icon_camera.png", width:"24px", height:"24px"
-                = f.file_field :image, class: 'file-input' 
+                = f.fields_for :item_images do |i|
+                  = i.file_field :image, class: 'file-input'
               .content-image_text
                 %P ドラッグ&ドロップ 
-                またはクリックしてファイルをアップロード
+                またはクリックしてファイルをアップロード 
         .product_name
           .product-content
             .product-name_title
@@ -31,7 +32,7 @@
                   %b 商品名
                 .label-2
                   %b 必須
-              %input.product-bottom
+              = f.text_field :name, class: 'product-bottom'
               .product-lower
                 40字以下で入力してください
             .product-bottom
@@ -40,7 +41,7 @@
               .label-2
                 %b 必須
             .product-name_text
-              = f.text_area :text, class: 'text-buttom', placeholder: '説明文を'
+              = f.text_area :description, class: 'text-buttom', placeholder: '説明文を'
               .text-lower
         .product_explanation
           .explanation-content
@@ -53,7 +54,7 @@
                 .upper-2
                   %b 必須
               .second-lower
-            .content-3
+            %input.content-3
               -# = f.select :categoly_id, Categoly.all.map { |categoly| [categoly.name,categoly.id]}
               .third-upper
               .third-lower
@@ -111,7 +112,7 @@
                   %b 必須
                 .upper-logo
                   %b ¥
-                %input.upper-right
+                  = f.text_field :price, class: 'upper-right'
               .p2-bottom
                 .bottom-left
                   販売手数料
@@ -131,7 +132,6 @@
           .exhibition-content2
             %p 禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
 
--# = render partial: 'new_footer', locals:{}
 
 .items__new
   = render partial: 'footer'
