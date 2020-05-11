@@ -31,10 +31,11 @@
         - @items.each do |item|
           %li.product__posts--boxs__item
             .posts__image
-              =image_tag item.item_images.first.image.url, class: "item-image"
-              %span.posts__price
-                ￥
-                =item.price
-              .posts__text
-                %p.posta__tag
-                  =item.name
+              = link_to class: "product-a" do
+                =image_tag item.item_images.first.image.url, class: "item-image"
+                %span.posts__price
+                  ￥
+                  =item.price
+                .posts__text
+                  %p.posta__tag
+                    =item.name
