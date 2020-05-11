@@ -115,21 +115,22 @@
       %i.fab.fa-pinterest-square
 
 
-  .show__users
-    ="jinnさんの作品"
+.show__users
+  ="jinnさんの作品"
 
 
 
   .show__users--other
     - @items.each do |item|
       .show__users--other__item
-        .show__users--other__item--image
-          =image_tag item.item_images.first.image.url, size:"220x190" 
+        =image_tag item.item_images.first.image.url, size:"220x190", class:"show__users--other__item--image"
         .show__users--other__item--contents
           .show__users--other__item--contents__name
             =item.name
           .show__users--other__item--contents__price
-            =item.price
+            =item.price      
+        
+          
                      
                           
 .items__show

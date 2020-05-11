@@ -162,44 +162,28 @@ a{
 
 
 .show__users--other{
-  width:700px;
-  margin:0 auto;
+  width:800px;
   display:flex;
+  margin:0 auto;
   flex-wrap:wrap;
+  justify-content:space-around;
 }
 
 .show__users--other__item{
-    width:220px;
-    height:300px;
-    margin: 0 20px 20px 0;
+    margin-bottom:40px;
 }
-
-.show__users--other__item--right{
-    margin-right:0px;
-}
-
-.show__users--other__item--image{
-    width:22px;
-    height:19px;
-}
-
 
 
 .show__users--other__item--contents{
-  height:110px;
   background-color:white;
-  margin-top:190px;
+  text-align:center;
+  font-size:15px;
 }
 
 .show__users--other__item--contents__name{
-  width:188px;
-  height:48px;
-  margin:0 auto;
   padding:16px;
 }
 
 .show__users--other__item--contents__price{
-    width:188px;
-    height:16px;
-    margin:0 auto;
+    padding:16px;
 }
