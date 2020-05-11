@@ -1,0 +1,40 @@
+%section.index__category
+  %h2.index__category--top
+    = "人気カテゴリー"
+  .index__category--names
+    %ul.index__category--names__box
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "レディース"
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "メンズ"
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "家電"
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "おもちゃ"
+
+%section.index__product
+  .index__product__list
+    %h3.index__product__list--name
+      = "レディースアイテム一覧"
+    = link_to root_path, class: "items" do
+      %span
+        = "もっと見る"
+        = icon('fa', 'angle-right', class: 'angle')
+
+  .product
+    .product__posts
+      %ul.product__posts--boxs
+        - @items.each do |item|
+          %li.product__posts--boxs__item
+            .posts__image
+              =image_tag item.item_images.first.image.url, class: "item-image"
+              %span.posts__price
+                ￥
+                =item.price
+              .posts__text
+                %p.posta__tag
+                  =item.name
