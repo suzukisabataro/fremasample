@@ -64,21 +64,42 @@
             = f.text_field :first_name_kana, type: "text", placeholder:"例)タロウ", class: "main__container__form__content-top__box__name__kanji"
 
         -# 生年月日入力欄
-        .main__container__form__content-top__box
-          .main__container__form__content-top__box__label
+        .main__container__form__content-top__birth
+          .main__container__form__content-top__birth__label
             生年月日
-          .main__container__form__content-top__box__require
+          .main__container__form__content-top__birth__require
             必須
-          .main__container__form__content-top__box__name
-            .main__container__form__content-top__box__name_birth_day
+          .main__container__form__content-top__birth__area
+            .main__container__form__content-top__birth__area__yymmdd
               = f.collection_select :birth_yy, Birth_year.all, :id, :name
               年
-            .main__container__form__content-top__box__name_birth_day
+            .main__container__form__content-top__birth__area__yymmdd
               = f.collection_select :birth_mm, Birth_month.all, :id, :name
               月
-            .main__container__form__content-top__box__name_birth_day
+            .main__container__form__content-top__birth__area__yymmdd
               = f.collection_select :birth_dd, Birth_day.all, :id, :name
               日
+          
+          -# 本人情報
+          .main__container__form__content-top__birth__text
+            ※本人情報は正しく入力してください。会員登録後、修正するにはお時間をいただく場合がございます。
 
-            
+        -# 次に進む（エリア）
+        .main__container__form__content-top__info
+          .main__container__form__content-top__info__text
+            「次へ進む」のボタンを押すことにより、
+            = link_to "利用規約","#"
+            に同意したものとします
+          .main__container__form__content-top__info__btn
+            = f.submit "次へ進む" ,class: "main__container__form__content-top__info__btn__red" 
+          .main__container__form__content-top__info__about
+            = link_to "本人情報の登録について ","#"
+            = icon('fa', 'angle-right',class:'icon')
+          .main__container__form__content-top__info__label
+            This site is protected by reCAPTCHA and the Google
+            = link_to " Privacy Policy ", "#", class: "main__container__form__content-top__info__label__policy"
+            and
+            = link_to " Terms of Service ", "#", class: "main__container__form__content-top__info__label__service"
+            apply.
+
   = render partial: 'items/footer'
