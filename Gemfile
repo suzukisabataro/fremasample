@@ -73,6 +73,7 @@ gem 'font-awesome-sass'
 gem 'devise', '~> 4.6.1'
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'seed-fu'
 
 group :production do
   gem 'unicorn'
