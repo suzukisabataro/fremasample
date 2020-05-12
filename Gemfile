@@ -73,13 +73,10 @@ gem 'font-awesome-sass'
 gem 'devise', '~> 4.6.1'
 gem 'mini_magick'
 gem 'carrierwave'
-gem 'seed-fu'
-gem 'ancestry'
 gem 'active_hash'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
-
 group :production do
   gem 'unicorn'
 end

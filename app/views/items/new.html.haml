@@ -72,7 +72,8 @@
                   %b 商品の状態
                 .upper-2
                   %b 必須
-            %input.content-7
+            -# %input.content-7
+            = f.collection_select :condition_id, Condition.all, :id, :value, prompt: "--"
         .delivery
           .delivery-content
             .delivery-1
@@ -91,7 +92,7 @@
               .d4-lower
                 %b 必須
             -# %input.delivery-5
-            = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "--", class: 'delivery-5'
+            = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "--"
             .delivery-6
               .d6-upper
                 %b 発送元の地域
