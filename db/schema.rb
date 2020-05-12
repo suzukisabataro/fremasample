@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_05_09_015831) do
     t.string "name", null: false
     t.string "description", null: false
     t.integer "price", null: false
+    t.integer "prefecture_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,9 +38,9 @@ ActiveRecord::Schema.define(version: 2020_05_09_015831) do
     t.string "first_name", null: false
     t.string "family_name_kana", null: false
     t.string "first_name_kana", null: false
-    t.integer "bith_dd", null: false
-    t.integer "bith_mm", null: false
-    t.integer "bith_yy", null: false
+    t.integer "birth_dd", null: false
+    t.integer "birth_mm", null: false
+    t.integer "birth_yy", null: false
     t.text "introduction"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

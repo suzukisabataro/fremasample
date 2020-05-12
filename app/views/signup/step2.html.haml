@@ -71,13 +71,13 @@
             必須
           .main__container__form__content-top__box__name
             .main__container__form__content-top__box__name_birth_day
-              = f.collection_select :bith_yy, Birth_year.all, :id, :name
+              = f.collection_select :birth_yy, Birth_year.all, :id, :name
               年
             .main__container__form__content-top__box__name_birth_day
-              = f.collection_select :bith_mm, Birth_month.all, :id, :name
+              = f.collection_select :birth_mm, Birth_month.all, :id, :name
               月
             .main__container__form__content-top__box__name_birth_day
-              = f.collection_select :bith_dd, Birth_day.all, :id, :name
+              = f.collection_select :birth_dd, Birth_day.all, :id, :name
               日
 
             
