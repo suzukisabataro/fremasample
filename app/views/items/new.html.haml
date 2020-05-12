@@ -90,7 +90,8 @@
                 %b 発送元の地域
               .d4-lower
                 %b 必須
-            %input.delivery-5
+            -# %input.delivery-5
+            = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "--", class: 'delivery-5'
             .delivery-6
               .d6-upper
                 %b 発送元の地域
