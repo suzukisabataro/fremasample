@@ -3,7 +3,6 @@
   height: 100vh;
   font-size: 18px;
   .main-box {
-    height: 420px;
     width: 500px;
     background: #fff;
     margin: 0 auto;
@@ -49,6 +48,7 @@
       &__text {
         text-decoration: none;
         color: rgb(46, 135, 170);
+        padding-bottom: 30px;
       }
     }
   } 
