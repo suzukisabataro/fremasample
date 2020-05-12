@@ -16,14 +16,18 @@
                 %b 必須
             .content-text
               最大10枚までアップロードできます。
-            .content-image
-              .content-image_icon
-                =image_tag "material/icon/icon_camera.png", width:"24px", height:"24px"
-                = f.fields_for :item_images do |i|
-                  = i.file_field :image, class: 'file-input'
-              .content-image_text
-                %P ドラッグ&ドロップ 
-                またはクリックしてファイルをアップロード 
+            .edit_contents
+              .edit_content
+                .edit_content-subject1
+                .edit_content-subject2
+              .edit_content-image
+                .edit_content-image_icon
+                  =image_tag "material/icon/icon_camera.png", width:"24px", height:"24px"
+                  = f.fields_for :item_images do |i|
+                    = i.file_field :image, class: 'file-input'
+                .content-image_text
+                  %P ドラッグ&ドロップ 
+                  またはクリックしてファイルをアップロード 
         .product_name
           .product-content
             .product-name_title
@@ -90,8 +94,7 @@
                 %b 発送元の地域
               .d4-lower
                 %b 必須
-            -# %input.delivery-5
-            = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "--", class: 'delivery-5'
+            %input.delivery-5
             .delivery-6
               .d6-upper
                 %b 発送元の地域

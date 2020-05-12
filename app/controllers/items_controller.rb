@@ -19,10 +19,12 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    # @items = Item.find(params[:id])
+    # @items.save
   end
 
   private
   def item_params
-    params.require(:item).permit(:name, :description, :price, item_images_attributes: [:image])
+    params.require(:item).permit(:name, :description, :price, :prefecture_id, item_images_attributes: [:image])
   end
 end
