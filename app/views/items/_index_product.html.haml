@@ -19,7 +19,49 @@
 %section.index__product
   .index__product__list
     %h3.index__product__list--name
-      = "レディースアイテム一覧"
+      = "アイテム一覧"
+    = link_to root_path, class: "items" do
+      %span
+        = "もっと見る"
+        = icon('fa', 'angle-right', class: 'angle')
+
+  .product
+    .product__posts
+      %ul.product__posts--boxs
+        - @items.each do |item|
+          %li.product__posts--boxs__item
+            .posts__image
+              = link_to class: "product-a" do
+                =image_tag item.item_images.first.image.url, class: "item-image"
+                %span.posts__price
+                  ￥
+                  =item.price
+                .posts__text
+                  %p.posta__tag
+                    =item.name
+
+%section.index__category
+  %h2.index__category--top
+    = "人気ブランド"
+  .index__category--names
+    %ul.index__category--names__box
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "シャネル"
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "ナイキ"
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "アディダス"
+      %li.index__category--names__boxs
+        = link_to root_path, class: "category__a" do
+          = "ルイ・ヴィトン"
+
+%section.index__product
+  .index__product__list
+    %h3.index__product__list--name
+      = "アイテム一覧"
     = link_to root_path, class: "items" do
       %span
         = "もっと見る"
