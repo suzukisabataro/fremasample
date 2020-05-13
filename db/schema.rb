@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2020_05_09_015831) do
     t.integer "birth_dd", null: false
     t.integer "birth_mm", null: false
     t.integer "birth_yy", null: false
+    t.string "phone_number", null: false
     t.text "introduction"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
