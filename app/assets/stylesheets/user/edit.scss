@@ -22,6 +22,13 @@
         margin-right: auto;
         margin-left: auto;
         background-color: white;
+        .edit__main--subject{
+          text-align:center;
+          margin-top:30px;
+          font-size:30px;
+          height:80px;  
+          border-bottom: 1px solid #ccc 
+        }
         .article{
           height:300px;
           width:700px;
@@ -33,6 +40,23 @@
           .edit_contents{
               display:flex;
               justify-content: space-between;
+              .edit_content-subject1{
+                height:150px;
+                width:135px;
+                background-color:blue;
+                display:block;
+              }
+              .edit_content-subject1_function{
+                display:flex;
+                border:solid;
+                .edit_content-subject1_image{
+                  height:100px;
+                  background-color:blue;
+                }
+                .edit_content-subject1_function{
+                  height:50px;
+                }
+              }
           }
           .article-content{
             height:220px;
@@ -65,17 +89,6 @@
               margin-top: 16px;  
               height:150px;
               width:270px;
-            //   background-color:#f5f5f5;
-              .edit_content-subject1{
-                height:150px;
-                width:135px;
-                background-color:blue;
-              }
-              .edit_content-subject1{
-                    height:150px;
-                    width:135px;
-                    background-color:red;
-                  }
               }
             
             .edit_content-image{
