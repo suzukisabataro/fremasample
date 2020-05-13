@@ -3,8 +3,7 @@
   height: 100vh;
   font-size: 18px;
   .main-box {
-    height: 420px;
-    width: 500px;
+    width: 600px;
     background: #fff;
     margin: 0 auto;
     &__header {
@@ -49,6 +48,7 @@
       &__text {
         text-decoration: none;
         color: rgb(46, 135, 170);
+        padding-bottom: 30px;
       }
     }
   } 
