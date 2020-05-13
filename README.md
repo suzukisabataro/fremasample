@@ -21,7 +21,13 @@
 |phone_num|integer|null: false|
 |authentication_num|integer|null: false|
 ### Association
-- belongs_to_active_hash :birth_yyyy
+- belongs_to_active_hash :birth_day_year
+- belongs_to_active_hash :birth_day_month
+- belongs_to_active_hash :birth_day_day
+- belongs_to_active_hash :prefecture
+- has_many :items
+- has_one :credit_cards, (pay.ja使用)
+- has_one :address
 
 ## Addressテーブル
 |Column|Type|Options|
@@ -51,7 +57,8 @@
 |costomer_id|intager|null: false|
 |cord_id|intager|null: false|
 |user_id|refarence|null: false, foreign_key: true|
-
+### Association
+- belongs_to :user
 
 ## Itemssテーブル
 |Column|Type|Options|
@@ -65,22 +72,22 @@
 |delivery_charge|reference|null: false, foreign_key: true|
 |delivery_day_id|reference|null: false, foreign_key: true|
 |delivery_way_id|reference|null: false, foreign_key: true|
-|area_id|reference|null: false, foreign_key: true|
+|prefecture_id|reference|null: false, foreign_key: true|
 |category_id|reference|null: false, foreign_key: true|
 |user_id|reference|null: false, foreign_key: true|
 
 ### Association
-- belongs_to_active_hash :category
-- belongs_to_active_hash :condition
-- belongs_to_active_hash :size
+- belongs_to_active_hash :item_condition
 - belongs_to_active_hash :delivery_charge
-- belongs_to_active_hash :prefecture
-- belongs_to_active_hash :delivery_days
+- belongs_to_active_hash :delivery_day
 - belongs_to_active_hash :delivery_way
-- belongs_to_active_hash :status
+- belongs_to_active_hash :delivery_way
+- belongs_to_active_hash :prefecture
+- belongs_to_active_hash :category
+- belongs_to_active_hash :size
 - has_many_attached :images
 - belongs_to :user
-- add_index :products, :name
+- add_index :items, :name
 
 ## Categoryテーブル
 |Column|Type|Options|
@@ -91,44 +98,48 @@
 |size|integer|
 |brand|integer|
 ### Association
-- has_many :products
+- has_many :items
+
 ## Conditionテーブル
 |Column|Type|Options|
 |------|----|-------|
 |value|string|null: false|
 ### Association
-- has_many :products
+- has_many :items
+
 ## Sizeテーブル
 |Column|Type|Options|
 |------|----|-------|
 |value|string|null: false|
 |group|integer|
 ### Association
-- has_many :products
+
+- has_many :items
 ## DeliveryChargeテーブル
 |Column|Type|Options|
 |------|----|-------|
 |value|string|null: false|
 ### Association
-- has_many :products
+- has_many :items
+
 ## DeliveryDaysテーブル
 |Column|Type|Options|
 |------|----|-------|
 |value|string|null: false|
 ### Association
-- has_many :products
+- has_many :items
+
 ## DeliveryWayテーブル
 |Column|Type|Options|
 |------|----|-------|
 |value|string|null: false|
 |charge|integer|
 ### Association
-- has_many :products
-## areaテーブル
+- has_many :items
+
+## prefectureテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- has_many :products
-### Association
-- has_many :item
+- has_many :items
