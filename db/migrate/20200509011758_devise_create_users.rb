@@ -15,6 +15,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.integer :birth_dd, null: false
       t.integer :birth_mm, null: false
       t.integer :birth_yy, null: false
+      t.string :phone_number, null: false
       t.text :introduction
 
       ## Recoverable

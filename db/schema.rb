@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_05_09_015831) do
     t.string "name", null: false
     t.string "description", null: false
     t.integer "price", null: false
-    t.integer "prefecture_id", null: false
+    t.integer "area_id", null: false
     t.integer "category_id", null: false
     t.integer "condition_id", null: false
     t.integer "delivery_charge_id", null: false
@@ -43,9 +43,16 @@ ActiveRecord::Schema.define(version: 2020_05_09_015831) do
     t.string "first_name", null: false
     t.string "family_name_kana", null: false
     t.string "first_name_kana", null: false
+<<<<<<< HEAD
     t.integer "birth_day_year", null: false
     t.integer "birth_day_month", null: false
     t.integer "birth_day_day", null: false
+=======
+    t.integer "birth_dd", null: false
+    t.integer "birth_mm", null: false
+    t.integer "birth_yy", null: false
+    t.string "phone_number", null: false
+>>>>>>> d6c5e7f74ba60a58966717cd08454ae5d8abf253
     t.text "introduction"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
