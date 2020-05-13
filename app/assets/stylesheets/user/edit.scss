@@ -33,16 +33,54 @@
         height:300px;
         width:700px;
         background-color: white;
-        border-bottom: 1px solid #CCC;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        .article-content{
-          height:220px;
-          width:620px;
+        .edit__main--subject{
+          text-align:center;
+          margin-top:30px;
+          font-size:30px;
+          height:80px;  
+          border-bottom: 1px solid #ccc; 
+        }
+        .article{
+          height:300px;
+          width:700px;
           background-color: white;
-          .content-label{
-            height:19px;
+          border-bottom: 1px solid #CCC;
+          display: flex;
+          justify-content: center; 
+          align-items: center; 
+          .edit_contents{
+              display:flex;
+              justify-content: space-between;
+              .edit_content{
+                display:flex;
+                .edit_content-subject1{
+                  width:135px;
+                  background-color:blue;
+                  display:block;
+                }
+                .edit_content-subject2{
+                  width:135px;
+                  background-color:yellow;
+                  display:block;
+                }
+              }
+              .edit_content-subject1_function{
+                display:flex;
+                border:1px solid;
+                height:50px;
+                margin-top:99px;
+                .edit_content-subject1_image{
+                  height:100px;
+                  background-color:red;
+                }
+                .edit_content-subject1_function{
+                  height:50px;
+                }
+              }
+          }
+          .article-content{
+            height:220px;
+            width:620px;
             background-color: white;
             font-size: 14px;
             display: flex;
