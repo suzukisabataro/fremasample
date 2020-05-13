@@ -86,7 +86,7 @@
                 %b 発送元の地域
               .d4-lower
                 %b 必須
-            = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "--" 
+            = f.collection_select :area_id, Area.all, :id, :name
             .delivery-6
               .d6-upper
                 %b 発送までの日数
