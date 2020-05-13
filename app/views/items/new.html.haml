@@ -17,7 +17,7 @@
             .content-text
               最大10枚までアップロードできます。
             .content-image
-              .content-image_icon
+              %label.content-image_icon
                 =image_tag "material/icon/icon_camera.png", width:"24px", height:"24px"
                 = f.fields_for :item_images do |i|
                   = i.file_field :image, class: 'file-input'
@@ -53,11 +53,7 @@
                   %b カテゴリー
                 .upper-2
                   %b 必須
-              .second-lower
-            %input.content-3
-              -# = f.select :categoly_id, Categoly.all.map { |categoly| [categoly.name,categoly.id]}
-              .third-upper
-              .third-lower
+            = f.collection_select :category_id, Category.all, :id, :name, prompt: "--"
             .content-4
               .fourth-upper
                 .upper-1
@@ -72,7 +68,7 @@
                   %b 商品の状態
                 .upper-2
                   %b 必須
-            %input.content-7
+            = f.collection_select :condition_id, Condition.all, :id, :value, prompt: "--" 
         .delivery
           .delivery-content
             .delivery-1
@@ -84,21 +80,19 @@
                 %b 配送量の負担
               .d2-lower
                 %b 必須
-            %input.delivery-3
+            = f.collection_select :delivery_charge_id, DeliveryCharge.all, :id, :value, prompt: "--" 
             .delivery-4
               .d4-upper
                 %b 発送元の地域
               .d4-lower
                 %b 必須
-            -# %input.delivery-5
-            = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "--", class: 'delivery-5'
+            = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "--" 
             .delivery-6
               .d6-upper
-                %b 発送元の地域
+                %b 発送までの日数
               .d6-lower
                 %b 必須
-
-            %input.delivery-7
+            = f.collection_select :delivery_days_id, DeliveryDays.all, :id, :value, prompt: "--"
         .price
           .price-content
             .price-1
@@ -128,11 +122,8 @@
           .exhibition-content
             = f.submit "出品する",class:"content-1"
             = f.submit "下書きに保存",class:"content-2"
-            .content-3
-              %a 戻る
+            = link_to root_path,class: "content-3" do
+              %b 戻る
           .exhibition-content2
             %p 禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
-
-
-.items__new
-  = render partial: 'footer'
+= render partial: 'footer'
