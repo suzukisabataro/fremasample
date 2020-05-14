@@ -17,17 +17,17 @@
 |birth_day_month|integer|null: false|
 |birth_day_day|integer|null: false|
 |introduuction|string||
+|phone_number|integer|null: false|
 |address_id|references|null: false, foreign_key: true|
-|phone_num|integer|null: false|
-|authentication_num|integer|null: false|
 ### Association
 - belongs_to_active_hash :birth_day_year
 - belongs_to_active_hash :birth_day_month
 - belongs_to_active_hash :birth_day_day
 - belongs_to_active_hash :prefecture
 - has_many :items
-- has_one :credit_cards, (pay.ja使用)
-- has_one :address
+- has_many :Comment
+- has_one :Credit_cards, (pay.ja使用)
+- has_one :Address
 
 ## Addressテーブル
 |Column|Type|Options|
@@ -35,32 +35,42 @@
 |postal_code|intager|null: false|
 |prefecture|integer|null: false|
 |city|string|null: false|
-|address1|string|null: false|
+|address1（番地）|string|null: false|
 |building_name|string|
-### Association
-- belongs_to :user
-
-## credit_cardsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|card_number|intager|null: false|
-|expriration_year|intager|null: false|
-|expriration_month|intager|null: false|
-|secuurty_code|intager|null: false|
 |user_id|refarence|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
+- belongs_to :users
 
-## credit_cardsテーブル(pay.ja使用)
+## Credit_cardsテーブル(pay.ja使用)
 |Column|Type|Options|
 |------|----|-------|
 |costomer_id|intager|null: false|
 |cord_id|intager|null: false|
 |user_id|refarence|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
+- belongs_to :users
 
-## Itemssテーブル
+## Commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|refarence|null: false, foreign_key: true|
+|items_id|refarence|null: false, foreign_key: true|
+|commtnt|text|null: false|
+
+### Association
+- belongs_to :users
+- belongs_to :items
+
+## Likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|refarence|null: false, foreign_key: true|
+|items_id|refarence|null: false, foreign_key: true|
+### Association
+- belongs_to :users
+- belongs_to :items
+
+## Itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -100,7 +110,7 @@
 ### Association
 - has_many :items
 
-## Conditionテーブル
+## Item_Conditionテーブル
 |Column|Type|Options|
 |------|----|-------|
 |value|string|null: false|
@@ -113,8 +123,8 @@
 |value|string|null: false|
 |group|integer|
 ### Association
-
 - has_many :items
+
 ## DeliveryChargeテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -137,9 +147,27 @@
 ### Association
 - has_many :items
 
-## prefectureテーブル
+## Areaテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 ### Association
 - has_many :items
+
+## Brandテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+### Association
+- has_many :items
+
+## Item_imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|item_id|reference|null: false, foreign_key: true|
+|item_images|string|null: false|
+### Association
+- has_many :items
+
+
+
