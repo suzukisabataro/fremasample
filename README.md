@@ -1,4 +1,5 @@
-[![Image from Gyazo](https://i.gyazo.com/164447c0ef483dc2411ccf71061cce6f.png)](https://gyazo.com/164447c0ef483dc2411ccf71061cce6f)
+## ER図
+[![Image from Gyazo](https://i.gyazo.com/c1154dc335489c7514c77c732409a421.png)](https://gyazo.com/c1154dc335489c7514c77c732409a421)
 # freemarket_sample_74b
 フリマアプリのクローンサイト。
 
@@ -25,8 +26,8 @@
 - belongs_to_active_hash :birth_day_day
 - belongs_to_active_hash :prefecture
 - has_many :items
-- has_many :Comment
-- has_one :Credit_cards, (pay.ja使用)
+- has_many :comment
+- has_one :credit_cards, (pay.ja使用)
 - has_one :Address
 
 ## Addressテーブル
